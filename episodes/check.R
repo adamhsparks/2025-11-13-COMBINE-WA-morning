@@ -9,10 +9,9 @@ main <- function() {
   args <- commandArgs(trailingOnly = TRUE)
   first_file <- read.csv(args[1], header = FALSE)
   first_dim <- dim(first_file)
-#   num_rows <- dim(first_file)[1]  # nrow(first_file)
-#   num_cols <- dim(first_file)[2]  # ncol(first_file)
-  
-  
+  #   num_rows <- dim(first_file)[1]  # nrow(first_file)
+  #   num_cols <- dim(first_file)[2]  # ncol(first_file)
+
   for (filename in args[-1]) {
     new_file <- read.csv(filename, header = FALSE)
     new_dim <- dim(new_file)

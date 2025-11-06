@@ -33,4 +33,3 @@ analyze_all <- function(pattern) {
     analyze(file.path(data_dir, f), output = pdf_name)
   }
 }
-

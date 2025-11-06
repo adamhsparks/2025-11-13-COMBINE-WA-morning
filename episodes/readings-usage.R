@@ -25,7 +25,10 @@ process <- function(filename, action) {
 }
 
 usage <- function() {
-  cat("usage: Rscript readings-usage.R [--min, --mean, --max] filenames", sep = "\n")
+  cat(
+    "usage: Rscript readings-usage.R [--min, --mean, --max] filenames",
+    sep = "\n"
+  )
 }
 
 main()
