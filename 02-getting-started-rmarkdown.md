@@ -274,7 +274,8 @@ Table: We can also add a caption.
 |Ruaca    |no                 |               7.178571|
 |Ruaca    |yes                |               9.500000|
 
-Many different R packages can be used to generate tables. Some of the more commonly used options are listed in the table below.
+Many different R packages can be used to generate tables.
+Some of the more commonly used options are listed in the table below.
 
 | Name          | Creator(s)   | Description                              |
 |---------------|--------------|-------------------------------------------|
