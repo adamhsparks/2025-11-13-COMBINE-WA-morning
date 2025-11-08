@@ -600,7 +600,7 @@ of the files.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -707,7 +707,7 @@ workspace.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <ul>
 <li>This is an optional lesson intended to introduce learners to R
@@ -1123,7 +1123,7 @@ library. Provides an HTML widget that can be used in ‘R Markdown’ or
 console.</td>
 </tr>
 <tr>
-<td><a href="http://jrowen.github.io/rhandsontable/" class="external-link">rhandsontable</a></td>
+<td><a href="https://jrowen.github.io/rhandsontable/" class="external-link">rhandsontable</a></td>
 <td><a href="https://cran.r-project.org/web/packages/rhandsontable/index.html" class="external-link">Owen
 et al. (2021)</a></td>
 <td>An R interface to the ‘Handsontable’ JavaScript library, which is a
@@ -1284,7 +1284,7 @@ the output.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Create a chunk with <code>{r eval = FALSE, echo = FALSE}</code>, then
 create another chunk with <code>{r include = FALSE}</code> to compare.
@@ -1385,7 +1385,7 @@ the <code>interviews_plotting</code> data frame.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1655,7 +1655,7 @@ automatically)</li>
 <li>a <code>NAMESPACE</code> file listing user-level (“exported”)
 functions in the package (we will also create this automatically)</li>
 </ul>
-<p><em>There are other optional components. <a href="http://r-pkgs.had.co.nz/description.html" class="external-link">Read the “R packages”
+<p><em>There are other optional components. <a href="https://r-pkgs.had.co.nz/description.html" class="external-link">Read the “R packages”
 book</a> and/or the original <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-structure" class="external-link">“Writing
 R Extensions” documentation</a> for much more information.</em></p>
 <div class="section level3">
@@ -1801,7 +1801,8 @@ default file, remove the <code>@export</code> tag from the auxiliary
 functions, and rerun <code>roxygenise()</code>. It’s still a good idea
 to retain their other roxygen tags (esp. <code>@param</code> &amp;
 <code>@return</code>).</p>
-<p>Learn more about this from the <a href="http://r-pkgs.had.co.nz/namespace.html" class="external-link">“R packages” book</a>.</p>
+<p>Learn more about this from the <a href="https://r-pkgs.had.co.nz/namespace.html" class="external-link">“R packages”
+book</a>.</p>
 </div>
 <div class="section level3">
 <h3 id="finishing-up">Finishing up<a class="anchor" aria-label="anchor" href="#finishing-up"></a>
