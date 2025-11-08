@@ -1,4 +1,3 @@
-
 ---
 title: Getting started with R Markdown
 teaching: 30
@@ -8,8 +7,6 @@ output:
     df_print: paged
 source: Rmd
 ---
-
-## Getting Started with R Markdown
 
 
 
@@ -430,7 +427,7 @@ interviews_plotting %>%
   geom_bar(aes(fill = village))
 ```
 
-<img src="fig/02-knitr-R-rendered-my-fancy-plot-1.png" style="display: block; margin: auto;" />
+<img src="fig/02-getting-started-rmarkdown-rendered-my-fancy-plot-1.png" style="display: block; margin: auto;" />
 
 :::::::::::::::::::::::::
 
@@ -458,7 +455,7 @@ interviews_plotting %>%
 ```
 
 <div class="figure" style="text-align: center">
-<img src="fig/02-knitr-R-rendered-caption-plot-1.png" alt="I made this plot while attending an awesome Data Carpentries workshop where I learned a ton of cool stuff!"  />
+<img src="fig/02-getting-started-rmarkdown-rendered-caption-plot-1.png" alt="I made this plot while attending an awesome Data Carpentries workshop where I learned a ton of cool stuff!"  />
 <p class="caption">I made this plot while attending an awesome Data Carpentries workshop where I learned a ton of cool stuff!</p>
 </div>
 
