@@ -1,0 +1,327 @@
+---
+title: Making Packages in R
+teaching: 60
+exercises: 30
+source: Rmd
+---
+
+
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+-   "Let RStudio create the required structure of a simple R package and review it."
+-   "Build and install the package in RStudio."
+-   "Use `roxygen2` to document functions."
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+-   "How do I collect my code together so I can reuse it and share it?"
+-   "How do I make my own package(s)?"
+-   "How do I integrate my function documentation into R's help pages system?"
+-   "What helper tools does RStudio provide me with?"
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Why should you make your own R packages?
+
+**Reproducible research!**
+
+An R package is the **basic unit of reusable code**.
+If you want to reuse code later or want others to be able to use your code, you should put it in a package.
+
+An R package requires four components, visualized in the folder tree below:
+
+```         
+package_name/
+├── DESCRIPTION              # metadata about the package
+├── man/                     # function documentation (can be generated automatically)
+├── NAMESPACE                # list of user-level functions in the package (can be generated automatically)
+├── R/                       # R source code
+└── <other_components>
+```
+
+*There are other optional components. [rOpenSci community](https://devguide.ropensci.org/building.html) has written a science-focused guidebook for package development, while [the "R packages" book](https://r-pkgs.org/description.html) contains all the fundamental information.*
+
+### DESCRIPTION file
+
+``` source
+Package: package_name
+Title: Brief package description
+Description: Longer package description
+Version: Version number(major.minor.patch)
+Author: Name and email of package creator
+Maintainer: Name and email of package maintainer (who to contact with issues)
+License: Abbreviation for an open source license
+```
+
+The package name can only contain letters and numbers and has to start with a letter.
+
+### .R files
+
+Functions don't all have to be in one file or each in separate files.
+How you organize them is up to you.
+Suggestion: organize in a logical manner so that you know which file holds which functions.
+
+### Making your first R package
+
+In this lesson, we will start building a "[personal package](https://hilaryparker.com/2013/04/03/personal-r-packages/)".
+This is meant to collect any kind of R code that is useful to *you*.
+As you continue to evolve it after this lesson, you may move code that belongs to the same publication, topic or a distinct project, into their own packages.
+Here we begin to realise the benefit of already documenting the functions formally earlier: We can publish more quickly, because we didn't leave much unfinished clean-up business.
+
+To start working on this personal package, please open RStudio's `File` menu and select `New Project… > New Directory… > R Package`.
+Give it a unique, but useful name.
+Your own will work just fine.
+Bonus points for squeezing in an `R` ;-)
+
+Also add the `source files` we created earlier (the first versions of `center.R` and `rescale.R`), so that we have some example code right away.
+
+<img src="../fig/08-RStudio-new-package.png" alt="New package in RStudio" width="500" />
+
+In case you have learned about version control already, it would be good practice to `create a git repository` now and `git commit` each step of building this package.
+
+<img src="../fig/08-RStudio-new-package-git.png" alt="Default package files in RStudio's Git pane" width="500" />
+
+RStudio's "skeleton" package can already be built, using the `Build > Install and Restart` option.
+Note the `library(...)` line that appears in the console.
+Also, notice there is now a `package:YouRName` environment that is the parent environment to the global environment.
+
+
+``` r
+search()
+```
+
+This means you can now take advantage of the console's auto-complete just like for any other package.
+Type `cen` and/or `resc`, then <kbd>Tab</kbd> and test some examples like `center(c(1, 2, 3), 0)` or `rescale(c(1, 2, 3))`.
+
+## Folder and file structure of an R package
+
+An R package requires four components:
+
+-   a `DESCRIPTION` file with metadata about the package
+-   an `R` directory with the code
+-   a `man` directory with documentation (we will create this automatically)
+-   a `NAMESPACE` file listing user-level ("exported") functions in the package (we will also create this automatically)
+
+*There are other optional components. [Read the "R packages" book](http://r-pkgs.had.co.nz/description.html) and/or the original ["Writing R Extensions" documentation](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Package-structure) for much more information.*
+
+### .R files
+
+Functions don't all have to be in one file or each in separate files.
+How you organize them is up to you.
+Suggestion: organize in a logical manner so that you know which file holds which functions.
+
+### `DESCRIPTION` file
+
+We used RStudio's import process to include the `.R` files we already had.
+However, FAIRer (because richer in metadata) `DESCRIPTION` files can be generated with `usethis::use_description()`:
+
+```         
+Package: PackageName
+Type: Package
+Version: 0.1.0
+Title: What the Package Does (One Line, Title Case)
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com")
+Description: What the package does (one paragraph).
+    Use four spaces when indenting paragraphs within the Description.
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+```
+
+The package name can only contain letters and numbers and has to start with a letter.
+
+::::::::::::::::::::::::::::::::::::::: challenge
+
+## Provide citation metadata in the `DESCRIPTION` file
+
+R supports citing R packages.
+Have a look at the output of `citation(YouRName)`.
+Does anything seem to be missing?
+If yes, how and where do you think we can add that information?
+
+Assuming you have an ORCiD, you may want to associate your R package with it.
+Find out how to add this information, and which additional changes you can make to the `DESCRIPTION` file.
+
+## Hint
+
+One useful resource to find the answer to such technical details is GitHub.
+Search for `org:ROpenSci filename:DESCRIPTION` (this restricts your search) to a community of practice and its R packages) plus [`2019`](https://github.com/search?q=org%3AROpenSci+filename%3ADESCRIPTION+2019) or [`orcid`](https://github.com/search?q=org%3AROpenSci+filename%3ADESCRIPTION+orcid) for example.
+
+:::::::::::::::::::::: solution
+
+The date is added in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `date: 2018-07-12`.
+
+ORCiDs can only be added to machine-readable `Authors@R` fields that use the `person(…)` function.
+`use_description()` created this already, so that you can add your ORCiD as a `comment = c(ORCID = "…")`.
+
+In summary: Enabling `citation()` to convert `DESCRIPTION` into a rich BibTeX snippet is a side-effect of FAIR metadata for your R package.
+
+:::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Converting function documentation to help pages
+
+Remember that we documented our functions with roxygen comments?
+Let's try and look it up:
+
+
+``` r
+?center
+help(rescale)
+```
+
+::::::::::::::::::::::::::::::::::::::: challenge
+
+## Why `No documentation for '…' in specified packages and libraries`? We did write it!
+
+Why do you think the documentation of our package can not be found.
+Hint: Look at the commit diff.
+
+:::::::::::::::::::::: solution
+
+### Solution
+
+We did not yet tell R to actually generate the `man`ual files and folders in our package.
+This needs to be done with `roxygen2::roxygenise()`.
+
+:::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
+After `Install and Restart`-ing again, looking up the documentation should work.
+
+What exactly does `roxygen2` do?
+It reads lines that begin with `#'` as the function documentation for your package.
+Descriptive tags are preceded with the `@` symbol.
+For example, `@param` has information about the input parameters for the function.
+
+### Exporting "user-level" functions
+
+We haven't talked about the `NAMESPACE` file yet!
+It belongs to the package skeleton, and was set up by RStudio with an `exportPattern`.
+Any file name in `R/` that matches it is automatically exported, meaning offered to users of your package in the console's tab-completion.
+
+If you want to publish your package, but keep some functions hidden (maybe because they only do auxiliary tasks), you can delete this default file, remove the `@export` tag from the auxiliary functions, and rerun `roxygenise()`.
+It's still a good idea to retain their other roxygen tags (esp. `@param` & `@return`).
+
+Learn more about this from the ["R packages" book](http://r-pkgs.had.co.nz/namespace.html).
+
+### Finishing up
+
+Please take a look at RStudio's `Files` panes now.
+The `man` directory should now contain one LaTeX-like formatted `.Rd` file for each function.
+
+In case you learned about Git already, also view the `.Rd` files in RStudio's `Git` pane and commit the documentation.
+
+::::::::::::::::::::::::::::::::::::::: challenge
+
+## How would you word the commit message?
+
+"Add docu" is a bit moot, because that's obvious from the filenames and contents.
+Which other messages would better explain the "Why?", or that would be more useful when browsing the commit history later
+
+:::::::::::::::::::::::::: hint
+
+ -   "roxygenise() function comments into help pages" because it mentions the command you used
+ -   "Integrate function documentation into R's standard help pages"
+ -   "Render function documentation as R's standard help pages"
+
+:::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
+Also, after `roxygenise()`-ing the function docu, you can tell R to run the examples.
+Using R's `example()` function on another function's name saves you from scrolling down its help page, copying the example code and pasting it into the console.
+
+
+``` r
+example(center)
+example(rescale)
+```
+
+
+
+::::::::::::::::::::::::::::::::::::::: challenge
+
+## Creating a Package for Distribution
+
+1.  Create some new functions for your tempConvert package to convert from Celsius to Fahrenheit or from Kelvin to Celsius or Fahrenheit.
+2.  Create a package for our `analyze` function so that it will be easy to load when more data arrives.
+
+::::::::::::::: solution
+
+## Solution
+
+``` r
+#' Converts Kelvin to Celsius
+#'
+#' This function converts input temperatures in Kelvin to Celsius.
+#' @param temp_K The temperature in Kelvin.
+#' @return The temperature in Celsius.
+#' @export
+#' @examples
+#' kelvin_to_celsius(273.15)
+
+kelvin_to_celsius <- function(temp_K) {
+  temp_C <- temp_K - 273.15
+  temp_C
+}
+```
+
+``` r
+#' Converts Celsius to Fahrenheit
+#'
+#' This function converts input temperatures in Celsius to Fahrenheit.
+#' @param temp_C The temperature in Celsius.
+#' @return The temperature in Fahrenheit.
+#' @export
+#' @examples
+#' celsius_to_fahrenheit(0)
+
+celsius_to_fahrenheit <- function(temp_C) {
+  temp_F <- (temp_C * 9/5) + 32
+  temp_F
+}
+```
+
+``` r
+#' Converts Kelvin to Fahrenheit
+#'
+#' This function converts input temperatures in Kelvin to Fahrenheit.
+#' @param temp_K The temperature in Kelvin.
+#' @return The temperature in Fahrenheit.
+#' @export
+#' @examples
+#' kelvin_to_fahrenheit(273.15)
+
+kelvin_to_fahrenheit <- function(temp_K) {
+  temp_C <- kelvin_to_celsius(temp_K)
+  temp_F <- celsius_to_fahrenheit(temp_C)
+  temp_F
+}
+```
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+-   A package is the basic unit of reusability in R.
+-   Every package must have a DESCRIPTION file and an R directory containing code. These are created by us.
+-   A NAMESPACE file is needed as well, and a man directory containing documentation, but both can be autogenerated.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+This was our basic introduction to packaging up R functions.
+To go on from here, remember to functionalise R code that you use repeatedly and incorporate it into your personal package.
+
+This lesson was a adapted from <https://github.com/TIBHannover/FAIR-R> under the CC-by-4.0 Licence.
