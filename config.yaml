@@ -1,3 +1,4 @@
+---
 #------------------------------------------------------------
 # Values for this lesson.
 #------------------------------------------------------------
@@ -8,32 +9,32 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-carpentry: 'swc'
+carpentry: "swc"
 
 # Overall title for pages.
-title: 'Programming with R'
+title: "Programming with R"
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: '2014-12-18'
+created: "2014-12-18"
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries'
+keywords: "software, data, lesson, The Carpentries"
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'stable'
+life_cycle: "stable"
 
 # License of the lesson materials (recommended CC-BY 4.0)
-license: 'CC-BY 4.0'
+license: "CC-BY 4.0"
 
 # Link to the source repository for this lesson
-source: 'https://github.com/swcarpentry/r-novice-inflammation'
+source: "https://github.com/adamhsparks/r-programming"
 
 # Default branch of your lesson
-branch: 'main'
+branch: "main"
 
 # Who to contact if there are any issues
-contact: 'adam.sparks@curtin.edu.au'
+contact: "adam.sparks@curtin.edu.au"
 
 # Navigation ------------------------------------------------
 #
@@ -59,9 +60,9 @@ contact: 'adam.sparks@curtin.edu.au'
 
 # Order of episodes in your lesson
 episodes:
-- 01-best-practices-R.Rmd
-- 02-knitr-R.Rmd
-- 03-making-packages-R.Rmd
+  - 01-best-practices-R.Rmd
+  - 02-knitr-R.Rmd
+  - 03-making-packages-R.Rmd
 
 # Information for Learners
 learners:
@@ -77,7 +78,6 @@ profiles:
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 
-
-url: 'https://adamhsparks.github.io/r-programming'
+url: "https://adamhsparks.github.io/r-programming"
 analytics: carpentries
 lang: en
