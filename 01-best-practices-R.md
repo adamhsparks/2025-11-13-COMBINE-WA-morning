@@ -11,9 +11,8 @@ source: Rmd
 
 - Describe changes made to code for future reference.
 - Understand the importance about requirements and dependencies for your code.
-- Know when to use setwd().
-- To identify and segregate distinct components in your code using # or #-.
-- Additional best practice recommendations.
+- Know when to use `setwd()`.
+- To identify and segregate distinct components in your code using `#` or `#-`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
