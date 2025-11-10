@@ -69,7 +69,7 @@ Quarto is a next-generation version of R Markdown that extends its capabilities 
 Unlike R Markdown, you must install Quarto separately from RStudio.
 Instructions for installing Quarto can be found at <https://quarto.org/docs/get-started/>.
 However, Quarto and R Markdown can coexist on the same system, and RStudio supports both formats and simply resaving or renaming a .Rmd to a .qmd file will convert it from an R Markdown document to a Quarto document.
-I won't spend time on Quarto here for this reason, but you can learn more about Quarto at <https://quarto.org/>, and the [cheat sheet](files/quarto-cheatsheet).
+I won't spend time on Quarto here for this reason, but you can learn more about Quarto at <https://quarto.org/>.
 
 ## Creating an R Markdown file
 
@@ -498,11 +498,11 @@ Tip: obtaining citation information from relevant packages can be done by using 
 - [R Markdown cheat sheet](https://github.com/rstudio/cheatsheets/blob/master/rmarkdown-2.0.pdf)
 - [Getting started with R Markdown](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/)
 - [Markdown tutorial](https://commonmark.org/help/tutorial/)
-- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) (book by Rstudio team)
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) (book by RStudio team)
 - [Reproducible Reporting](https://www.rstudio.com/resources/webinars/reproducible-reporting/)
 - [Introducing Bookdown](https://www.rstudio.com/resources/webinars/introducing-bookdown/)
-- [RMarkdown cheatsheet](files/rmarkdown-cheatsheet.pdf)
-- [Quarto cheatsheet](files/quarto-cheatsheet.pdf)
+- [Quarto cheat sheet](https://github.com/rstudio/cheatsheets/blob/main/quarto.pdf)
+- [Quarto documentation](https://quarto.org/docs/)
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
