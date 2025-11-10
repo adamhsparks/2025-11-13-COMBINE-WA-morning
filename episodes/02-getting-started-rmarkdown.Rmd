@@ -56,7 +56,7 @@ The **rmarkdown** package comes pre-installed with RStudio, so no action is nece
 
 <figure>
 ```{r rmarkdown-wizards, echo = FALSE, fig.show = "hold", fig.alt = "R Markdown wizard monsters creating a R Markdown document from a recipe. Art by Allison Horst", out.width="100%"}
-knitr::include_graphics("fig/rmarkdown_wizards.png")
+  knitr::include_graphics("fig/rmarkdown_wizards.png")
 ```
 <figcaption>
 Image credit: <a href="https://github.com/allisonhorst/stats-illustrations">Allison Horst</a>
@@ -70,6 +70,16 @@ Unlike R Markdown, you must install Quarto separately from RStudio.
 Instructions for installing Quarto can be found at <https://quarto.org/docs/get-started/>.
 However, Quarto and R Markdown can coexist on the same system, and RStudio supports both formats and simply resaving or renaming a .Rmd to a .qmd file will convert it from an R Markdown document to a Quarto document.
 I won't spend time on Quarto here for this reason, but you can learn more about Quarto at <https://quarto.org/>.
+
+<figure>
+```{quarto, echo = FALSE, fig.show = "hold", fig.alt = "A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g., PDF, html, Word documents, and more) versatility of Quarto.", width="100%"}
+  knitr::include_graphics("fig/quarto_schematic.png")
+```
+
+<figcaption>
+Image credit: <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</a>
+</figcaption>
+</figure>
 
 ## Creating an R Markdown file
 
