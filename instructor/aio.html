@@ -600,7 +600,7 @@ of the files.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -707,7 +707,7 @@ workspace.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <ul>
 <li>This is an optional lesson intended to introduce learners to R
@@ -789,9 +789,9 @@ you must install Quarto separately from RStudio. Instructions for
 installing Quarto can be found at <a href="https://quarto.org/docs/get-started/" class="external-link uri">https://quarto.org/docs/get-started/</a>. However, Quarto
 and R Markdown can coexist on the same system, and RStudio supports both
 formats and simply resaving or renaming a .Rmd to a .qmd file will
-convert it from R Markdown to Quarto. I won’t spend time on Quarto here
-for this reason, but you can learn more about Quarto at <a href="https://quarto.org/" class="external-link uri">https://quarto.org/</a>, and the
-<a href="../files/quarto-cheatsheet">cheat sheet</a>.</p>
+convert it from an R Markdown document to a Quarto document. I won’t
+spend time on Quarto here for this reason, but you can learn more about
+Quarto at <a href="https://quarto.org/" class="external-link uri">https://quarto.org/</a>.</p>
 </section><section><h2 class="section-heading" id="creating-an-r-markdown-file">Creating an R Markdown file<a class="anchor" aria-label="anchor" href="#creating-an-r-markdown-file"></a>
 </h2>
 <hr class="half-width">
@@ -1300,7 +1300,7 @@ the output.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Create a chunk with <code>{r eval = FALSE, echo = FALSE}</code>, then
 create another chunk with <code>{r include = FALSE}</code> to compare.
@@ -1401,7 +1401,7 @@ the <code>interviews_plotting</code> data frame.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1519,14 +1519,14 @@ started with R Markdown</a></li>
 tutorial</a></li>
 <li>
 <a href="https://bookdown.org/yihui/rmarkdown/" class="external-link">R Markdown: The
-Definitive Guide</a> (book by Rstudio team)</li>
+Definitive Guide</a> (book by RStudio team)</li>
 <li><a href="https://www.rstudio.com/resources/webinars/reproducible-reporting/" class="external-link">Reproducible
 Reporting</a></li>
 <li><a href="https://www.rstudio.com/resources/webinars/introducing-bookdown/" class="external-link">Introducing
 Bookdown</a></li>
-<li><a href="../files/rmarkdown-cheatsheet.pdf">RMarkdown
-cheatsheet</a></li>
-<li><a href="../files/quarto-cheatsheet.pdf">Quarto cheatsheet</a></li>
+<li><a href="https://github.com/rstudio/cheatsheets/blob/main/quarto.pdf" class="external-link">Quarto
+cheat sheet</a></li>
+<li><a href="https://quarto.org/docs/" class="external-link">Quarto documentation</a></li>
 </ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -1741,7 +1741,7 @@ for example.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The date is added in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link">ISO 8601</a> format:
 <code>date: 2018-07-12</code>.</p>
@@ -1789,7 +1789,7 @@ Hint: Look at the commit diff.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We did not yet tell R to actually generate the <code>man</code>ual
 files and folders in our package. This needs to be done with
@@ -1851,7 +1851,7 @@ that would be more useful when browsing the commit history later</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <ul>
 <li>“roxygenise() function comments into help pages” because it mentions
@@ -1896,7 +1896,7 @@ will be easy to load when more data arrives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
