@@ -66,8 +66,9 @@ Image credit: <a href="https://github.com/allisonhorst/stats-illustrations">Alli
 ## A Note on Quarto
 
 Quarto is a next-generation version of R Markdown that extends its capabilities to support multiple programming languages (including R, Python, and Julia) and offers enhanced features for creating dynamic documents, presentations, websites, and books. Quarto builds upon the foundation of R Markdown while providing a more versatile and powerful framework for reproducible research and reporting.
-Unlike R Markdown, you must install Quarto separately from RStudio. Instructions for installing Quarto can be found at <https://quarto.org/docs/get-started/>.
-However, Quarto and R Markdown can coexist on the same system, and RStudio supports both formats and simply resaving or renaming a .Rmd to a .qmd file will convert it from R Markdown to Quarto.
+Unlike R Markdown, you must install Quarto separately from RStudio.
+Instructions for installing Quarto can be found at <https://quarto.org/docs/get-started/>.
+However, Quarto and R Markdown can coexist on the same system, and RStudio supports both formats and simply resaving or renaming a .Rmd to a .qmd file will convert it from an R Markdown document to a Quarto document.
 I won't spend time on Quarto here for this reason, but you can learn more about Quarto at <https://quarto.org/>, and the [cheat sheet](files/quarto-cheatsheet).
 
 ## Creating an R Markdown file
