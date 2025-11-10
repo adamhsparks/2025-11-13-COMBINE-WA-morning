@@ -43,12 +43,11 @@ The original episode can be found here, <https://preview.carpentries.org/r-socia
 
 ## R Markdown
 
-R Markdown is a flexible type of document that allows you to seamlessly combine executable R code, and its output, with text in a single document. These
-documents can be readily converted to multiple static and dynamic output formats, including PDF (.pdf), Word (.docx), and HTML (.html).
+R Markdown is a flexible type of document that allows you to seamlessly combine executable R code, and its output, with text in a single document.
+These documents can be readily converted to multiple static and dynamic output formats, including PDF (.pdf), Word (.docx), and HTML (.html).
 
 The benefit of a well-prepared R Markdown document is full reproducibility.
-This also means that, if you notice a data transcription error, or you are able to add more data to your analysis, you will be able to recompile the report without
-making any changes in the actual document.
+This also means that, if you notice a data transcription error, or you are able to add more data to your analysis, you will be able to recompile the report without making any changes in the actual document.
 
 The **rmarkdown** package comes pre-installed with RStudio, so no action is necessary.
 
@@ -68,7 +67,7 @@ However, Quarto and R Markdown can coexist on the same system, and RStudio suppo
 I won't spend time on Quarto here for this reason, but you can learn more about Quarto at <https://quarto.org/>.
 
 <figure>
-
+<img src="fig/quarto_schematic.png" alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g., PDF, html, Word documents, and more) versatility of Quarto. Art by Allison Horst" style="display: block; margin: auto;" />
 
 <figcaption>
 Image credit: <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</a>
