@@ -172,13 +172,13 @@ Instead, start in a clean environment so that older objects don't remain in your
 If that happens, it can lead to unexpected results.
 
 7. Wherever possible, [keep track of `sessionInfo()` somewhere][sessionInfo] in your project folder.
-Session information is invaluable because it captures all of the packages used in the current project.
+Session information is invaluable because it captures all the packages used in the current project.
 If a newer version of a package changes the way a function behaves, you can always go back and reinstall the version that worked (Note: At least on CRAN, all older versions of packages are permanently archived).
 
 8. Collaborate. Grab a buddy and practice "code review".
 Review is used for preparing experiments and manuscripts; why not use it for code as well?
 Our code is also a major scientific achievement and the product of lots of hard work!
-Reviews are built into [GitHub's Pull request feature][gh-pr]
+Reviews are built into [GitHub's Pull request feature][gh-pr].
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -187,68 +187,6 @@ Reviews are built into [GitHub's Pull request feature][gh-pr]
 1. What other suggestions do you have for coding best practices?
 2. What are some specific ways we could restructure the code we worked on today to make it easier for a new user to read?
 Discuss with your neighbor.
-3. Make two new R scripts called `inflammation.R` and `inflammation_fxns.R`.
-  Copy and paste code into each script so that `inflammation.R` "does stuff" and `inflammation_fxns.R` holds all of your functions.
-  **Hint**: you will need to add `source` to one of the files.
-
-:::::::::::::::  solution
-
-
-``` bash
-cat inflammation.R
-```
-
-``` output
-# This code runs the inflammation data analysis.
-
-source("inflammation_fxns.R")
-analyze_all("inflammation.*csv")
-```
-
-
-``` bash
-cat inflammation_fxns.R
-```
-
-``` output
-# This is code for functions used in our inflammation data analysis.
-
-analyze <- function(filename, output = NULL) {
-  # Plots the average, min, and max inflammation over time.
-  # Input:
-  #    filename: character string of a csv file
-  #    output: character string of pdf file for saving
-  if (!is.null(output)) {
-    pdf(output)
-  }
-  dat <- read.csv(file = filename, header = FALSE)
-  avg_day_inflammation <- apply(dat, 2, mean)
-  plot(avg_day_inflammation)
-  max_day_inflammation <- apply(dat, 2, max)
-  plot(max_day_inflammation)
-  min_day_inflammation <- apply(dat, 2, min)
-  plot(min_day_inflammation)
-  if (!is.null(output)) {
-    dev.off()
-  }
-}
-
-analyze_all <- function(pattern) {
-  # Directory name containing the data
-  data_dir <- "data"
-  # Directory name for results
-  results_dir <- "results"
-  # Runs the function analyze for each file in the current working directory
-  # that contains the given pattern.
-  filenames <- list.files(path = data_dir, pattern = pattern)
-  for (f in filenames) {
-    pdf_name <- file.path(results_dir, sub("csv", "pdf", f))
-    analyze(file.path(data_dir, f), output = pdf_name)
-  }
-}
-```
-
-:::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
