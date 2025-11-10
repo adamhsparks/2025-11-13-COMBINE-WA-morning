@@ -72,7 +72,7 @@ However, Quarto and R Markdown can coexist on the same system, and RStudio suppo
 I won't spend time on Quarto here for this reason, but you can learn more about Quarto at <https://quarto.org/>.
 
 <figure>
-```{quarto, echo = FALSE, fig.show = "hold", fig.alt = "A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g., PDF, html, Word documents, and more) versatility of Quarto.", width="100%"}
+  ```{r quarto, echo = FALSE, fig.show = "hold", fig.alt = "A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g., PDF, html, Word documents, and more) versatility of Quarto. Art by Allison Horst", width="100%"}
   knitr::include_graphics("fig/quarto_schematic.png")
 ```
 
