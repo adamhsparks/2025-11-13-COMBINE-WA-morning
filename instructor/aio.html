@@ -400,14 +400,14 @@ that a dependency hasn’t been installed.</p>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">reshape</span><span class="op">)</span></span>
-<span><span class="kw">library</span><span class="op">(</span><span class="va">vegan</span><span class="op">)</span></span></code></pre>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">lubridate</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Another way you can be explicit about the requirements of your code
-and improve it’s reproducibility is to limit the “hard-coding” of the
+and improve its reproducibility is to limit the “hard-coding” of the
 input and output files for your script. If your code will read in data
 from a file, define a variable early in your code that stores the path
-to that file. For example</p>
+to that file. For example:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -424,7 +424,7 @@ to that file. For example</p>
 <span><span class="co"># write results</span></span>
 <span><span class="fu">write.table</span><span class="op">(</span><span class="va">results</span>, <span class="va">output_file</span><span class="op">)</span></span></code></pre>
 </div>
-<p>is preferable to</p>
+<p>is preferable to:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
