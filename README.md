@@ -1,4 +1,4 @@
-[![Build and Deploy Website](https://github.com/adamhsparks/r-programming/workflows/01%20Build%20and%20Deploy%20Site/badge.svg)](https://github.com/swcarpentry/r-novice-inflammation/actions/workflows/sandpaper-main.yaml) [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://slack-invite.carpentries.org/) [![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--r--inflammation-E01563.svg)](https://carpentries.slack.com/messages/C9WDPCMUG)
+[![Build and Deploy Website](https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/workflows/01%20Build%20and%20Deploy%20Site/badge.svg)](https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/actions/workflows/sandpaper-main.yaml) [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://slack-invite.carpentries.org/)
 
 # r-programming
 
@@ -9,17 +9,17 @@ Making changes in this GitHub repository allows us to change the content of the 
 
 The following people are maintainers for this lesson, and are responsible for determining which changes to incorporate into the lesson:
 
--   Thomas Cason (\@tecason)
--   Rohit Goswami (\@haozeke)
--   Hugo Gruson (\@Bisaloo)
--   Katie O'Mahony (\@aforestsomewhere)
+- Thomas Cason (\@tecason)
+- Rohit Goswami (\@haozeke)
+- Hugo Gruson (\@Bisaloo)
+- Katie O'Mahony (\@aforestsomewhere)
 
 Alumni:
 
--   Daniel Chen (\@chendaniely)
--   Diya Das (\@diyadas)
--   Isaac Jennings (\@isaac-jennings)
--   Katrin Leinweber (\@katrinleinweber)
+- Daniel Chen (\@chendaniely)
+- Diya Das (\@diyadas)
+- Isaac Jennings (\@isaac-jennings)
+- Katrin Leinweber (\@katrinleinweber)
 
 The goal of this lesson is to teach novice programmers to write modular code to perform a data analysis.
 R is used to teach these skills because it is a commonly used programming language in many scientific disciplines.
