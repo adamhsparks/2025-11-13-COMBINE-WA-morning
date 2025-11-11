@@ -173,7 +173,7 @@ rm(list = ls()) # If you want to delete all the objects in the workspace and sta
 6. Don't save a session history (the default option in R, when it asks if you want an `RData` file).
 Instead, start in a clean environment so that older objects don't remain in your environment any longer than they need to.
 If that happens, it can lead to unexpected results.
-You can disable this in RStudio as well, as follows:
+*You can disable this in RStudio as well, as follows:*
 Go to your menu bar, then click Tools → Global Options to open up the Options window.
 ![](fig/rstudio_settings.png){alt='Screenshot of the RStudio Global Options, with "Restore .RData into workspace at startup" unchecked, and "Save workspace to .RData on exit" set to "Never".'}
 Make sure your settings match those highlighted in yellow.
