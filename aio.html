@@ -555,13 +555,13 @@ delete objects. You can force R to tidy up its memory by using
 <span><span class="fu">rm</span><span class="op">(</span>list <span class="op">=</span> <span class="fu">ls</span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="co"># If you want to delete all the objects in the workspace and start with a clean slate</span></span></code></pre>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li><p><a href="https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html#getting-set-up" class="external-link">Don’t
-save a session history</a> (the default option in R, when it asks if you
-want an <code>RData</code> file). Instead, start in a clean environment
-so that older objects don’t remain in your environment any longer than
-they need to. If that happens, it can lead to unexpected results. You
-can disable this in RStudio as well, as follows: Go to your menu bar,
-then click Tools → Global Options to open up the Options window. <img src="fig/rstudio_settings.png" alt='Screenshot of the RStudio Global Options, with "Restore .RData into workspace at startup" unchecked, and "Save workspace to .RData on exit" set to "Never".' class="figure">
+<li><p>Don’t save a session history (the default option in R, when it
+asks if you want an <code>RData</code> file). Instead, start in a clean
+environment so that older objects don’t remain in your environment any
+longer than they need to. If that happens, it can lead to unexpected
+results. You can disable this in RStudio as well, as follows: Go to your
+menu bar, then click Tools → Global Options to open up the Options
+window. <img src="fig/rstudio_settings.png" alt='Screenshot of the RStudio Global Options, with "Restore .RData into workspace at startup" unchecked, and "Save workspace to .RData on exit" set to "Never".' class="figure">
 Make sure your settings match those highlighted in yellow. We don’t want
 RStudio to store the current status of our R session and reload it the
 next time we start R. This might sound convenient, but for the sake of
@@ -1227,7 +1227,7 @@ the output.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Create a chunk with <code>{r eval = FALSE, echo = FALSE}</code>, then
 create another chunk with <code>{r include = FALSE}</code> to compare.
@@ -1328,7 +1328,7 @@ the <code>interviews_plotting</code> data frame.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
