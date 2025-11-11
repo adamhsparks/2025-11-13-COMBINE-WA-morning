@@ -141,6 +141,8 @@ LazyData: true
 
 The package name can only contain letters and numbers and has to start with a letter.
 
+Using `desc::desc_normalise()` will format the `DESCRIPTION` file nicely.
+
 ::::::::::::::::::::::::::::::::::::::: challenge
 
 ## Provide citation metadata in the `DESCRIPTION` file
