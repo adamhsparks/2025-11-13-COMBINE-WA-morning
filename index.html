@@ -280,8 +280,8 @@ this introduction to R is built around a common scientific task: data
 analysis. I’ve focused on best practices for R programming to start,
 included some use of {knitr}, RMarkdown and Quarto and finish building R
 packages.</p>
-<p>My real goal isn’t to teach you R, but to teach you the basic
-concepts that all programming depends on.</p>
+<p>My real goal isn’t to teach you how to use R, but to teach you the
+basic concepts that all programming depends on.</p>
 <div id="prereq1" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
@@ -291,8 +291,27 @@ concepts that all programming depends on.</p>
 <div class="callout-content">
 <p>Learners need to understand the concepts of files and directories
 (including the working directory). I will use RStudio to teach this
-lesson, but it is not required (I put this lesson together using
-Neovim).</p>
+lesson, but it is not required. In fact, I put this lesson together
+using Neovim.</p>
+<div class="section level2">
+<h2 id="software-setup">Software Setup<a class="anchor" aria-label="anchor" href="#software-setup"></a></h2>
+<p>This lesson assumes you have R and RStudio installed on your
+computer.</p>
+<p><a href="https://www.r-project.org/" class="external-link">Download and install the latest
+version of R</a> for your computer. <a href="https://www.rstudio.com/products/rstudio/download/#download" class="external-link">Download
+and install RStudio</a>. RStudio is an application (an integrated
+development environment or IDE) that facilitates the use of R and offers
+a number of nice additional features. You will need the free desktop
+version for your computer.</p>
+<p>You will also need the following R packages installed on your
+computer:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"devtools"</span>, <span class="st">"tidyverse"</span>, <span class="st">"here"</span>, <span class="st">"roxygen2"</span>, <span class="st">"knitr"</span>, <span class="st">"desc"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
