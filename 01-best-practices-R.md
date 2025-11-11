@@ -173,7 +173,18 @@ ls() # Lists all the objects in your current workspace
 rm(list = ls()) # If you want to delete all the objects in the workspace and start with a clean slate
 ```
 
-6. [Don't save a session history][dc-rstudio] (the default option in R, when it asks if you want an `RData` file).
+6. Don't save a session history (the default option in R, when it asks if you want an `RData` file).
+Instead, start in a clean environment so that older objects don't remain in your environment any longer than they need to.
+If that happens, it can lead to unexpected results.
+You can disable this in RStudio as well, as follows:
+Go to your menu bar, then click Tools → Global Options to open up the Options window.
+![](fig/rstudio_settings.png){alt='Screenshot of the RStudio Global Options, with "Restore .RData into workspace at startup" unchecked, and "Save workspace to .RData on exit" set to "Never".'}
+Make sure your settings match those highlighted in yellow.
+We don't want RStudio to store the current status of our R session and reload it the next time we start R.
+This might sound convenient, but for the sake of reproducibility, we want to start with a clean, empty R session every time we work.
+That means that we have to record everything we do into scripts, save any data we need into files, and store outputs like images as files.
+We want to get used to everything we generate in a single R session being *disposable*.
+We want our scripts to be able to regenerate things we need, other than "raw materials" like data.
 Instead, start in a clean environment so that older objects don't remain in your environment any longer than they need to.
 If that happens, it can lead to unexpected results.
 
@@ -181,12 +192,13 @@ If that happens, it can lead to unexpected results.
 Session information is invaluable because it captures all the packages used in the current project.
 If a newer version of a package changes the way a function behaves, you can always go back and reinstall the version that worked (Note: At least on CRAN, all older versions of packages are permanently archived).
 
-8. Collaborate. Grab a buddy and practice "code review".
+8. Collaborate.
+Grab a buddy and practice "code review".
 Review is used for preparing experiments and manuscripts; why not use it for code as well?
 Our code is also a major scientific achievement and the product of lots of hard work!
 Reviews are built into [GitHub's Pull request feature][gh-pr].
 
-:::::::::::::::::::::::::::::::::::::::  challenge
+::::::::::::::::::::::::::::::::::::::: challenge
 
 ## Best Practice
 
@@ -194,12 +206,11 @@ Reviews are built into [GitHub's Pull request feature][gh-pr].
 2. What are some specific ways we could restructure the code we worked on today to make it easier for a new user to read?
 Discuss with your neighbor.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
 [swc-lesson-git]: https://swcarpentry.github.io/git-novice/
 [rstudio-git]: https://docs.posit.co/ide/user/ide/guide/tools/version-control.html
 [rstudio-project]: https://posit.co/resources/videos/programming-part-1-writing-code-in-rstudio/
-[dc-rstudio]: https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html#getting-set-up
 [sessionInfo]: https://stackoverflow.com/a/21967272/4341322
 [gh-pr]: https://github.com/skills/review-pull-requests
 
