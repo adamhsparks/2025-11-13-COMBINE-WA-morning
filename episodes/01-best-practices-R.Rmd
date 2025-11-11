@@ -189,7 +189,8 @@ If that happens, it can lead to unexpected results.
 Session information is invaluable because it captures all the packages used in the current project.
 If a newer version of a package changes the way a function behaves, you can always go back and reinstall the version that worked (Note: At least on CRAN, all older versions of packages are permanently archived).
 
-8. Collaborate. Grab a buddy and practice "code review".
+8. Collaborate.
+Grab a buddy and practice "code review".
 Review is used for preparing experiments and manuscripts; why not use it for code as well?
 Our code is also a major scientific achievement and the product of lots of hard work!
 Reviews are built into [GitHub's Pull request feature][gh-pr].
