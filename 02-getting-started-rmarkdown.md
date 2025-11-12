@@ -429,10 +429,7 @@ interviews_plotting <- interviews %>%
 
 ## Exercise
 
-Create a new code chunk for the plot, and copy the code from any of the plots we created in the previous episode to produce a plot in the chunk.
-I recommend one of the colourful plots.
-
-If you are feeling adventurous, you can also create a new plot with the `interviews_plotting` data frame.
+Create a new code chunk for the plot and use the data from `interviews_plotting` in `ggplot2` to create a plot in your R Markdown document.
 
 ::::::::::::::: solution
 
