@@ -213,7 +213,8 @@ We're going to create a new project in RStudio and save some data for later use:
 5. Click the "Create Project" button.
 6. Tick the "Open project in new session" box and click "OK".
 7. In your new RStudio project window, from the Files pane, click on the "New Folder" button and create a new directory called "data".
-7. Download the file located at <https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/blob/main/episodes/data/SAFI_clean.csv> and save it in the "data" directory you just created in your new project folder.
+8. Download the file located at <https://raw.githubusercontent.com/adamhsparks/2025-11-13-COMBINE-WA-morning/refs/heads/main/episodes/data/SAFI_clean.csv>.
+Use `File > Save` to save it in the "data" directory you just created in your new project folder.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
