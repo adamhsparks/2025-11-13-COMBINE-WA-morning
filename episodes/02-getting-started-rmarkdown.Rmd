@@ -269,7 +269,7 @@ Instead, you can run the code chunk with the green triangle in the top right cor
 
 To make sure the table is formatted nicely in our output document, we will need to use the `kable()` function from the **knitr** package.
 The `kable()` function takes the output of your R code and knits it into a nice looking HTML table.
-You can also specify different aspects of the table, e.g. the column names, a caption, etc.
+You can also specify different aspects of the table, *e.g.*, the column names, a caption, etc.
 
 Run the code chunk to make sure you get the desired output.
 
