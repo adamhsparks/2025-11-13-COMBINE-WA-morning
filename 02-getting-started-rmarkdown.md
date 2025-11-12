@@ -102,7 +102,7 @@ In the YAML, the only required field is the `output:`, which specifies the type 
 `word_document`. We will start with an HTML document and discuss the other options later.
 
 The rest of the fields can be deleted, if you don't need them. After the header, to begin the body of the document, you start typing after the end of the YAML
-header (i.e. after the second `---`).
+header (*i.e.*, after the second `---`).
 
 ## Markdown syntax
 
@@ -125,7 +125,7 @@ Adding more `#`s make the heading smaller, i.e. one `#` is a first level heading
 ###### Sub-sub-sub-sub section
 ```
 
-(only use a level if the one above is also in use)
+(only use a level if the one above is also in use).
 
 Since we have already defined our title in the YAML header, we will use a section heading to create an Introduction section.
 
