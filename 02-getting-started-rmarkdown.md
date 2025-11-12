@@ -133,7 +133,7 @@ Since we have already defined our title in the YAML header, we will use a sectio
 ## Introduction
 ```
 
-You can make things **bold** by surrounding the word with double asterisks, `**bold**`, or double underscores, `__bold__`; and *italicize* using single
+You can make things **bold** by surrounding the word with double asterisks, `**bold**`, or double underscores, `__bold__`; and *italicise* using single
 asterisks, `*italics*`, or single underscores, `_italics_`.
 
 You can also combine **bold** and *italics* to write something ***really*** important with triple-asterisks, `***really***`, or underscores, `___really___`;
@@ -204,11 +204,12 @@ document yet, you will be prompted to do so when you **Knit** for the first time
 
 ## Writing an R Markdown report
 
-Now we will add some R code from our previous data wrangling and visualisation, which means we need to make sure **tidyverse** is loaded. It is not enough to
-load **tidyverse** from the console, we will need to load it within our R Markdown document.
-The same applies to our data. To load these, we will need to create a 'code chunk' at the top of our document (below the YAML header).
+Now we will add some R code, which means we need to make sure **tidyverse** is loaded.
+It is not enough to load **tidyverse** from the console, we will need to load it within our R Markdown document.
+The same applies to our data.
+To load these, we will need to create a 'code chunk' at the top of our document (below the YAML header).
 
-A code chunk can be inserted by clicking Code > Insert Chunk, or by using the keyboard shortcuts <kbd>Ctrl</kbd>\+<kbd>Alt</kbd>\+<kbd>I</kbd> on Windows and Linux,
+A code chunk can be inserted by clicking `Code > Insert Chunk`, or by using the keyboard shortcuts <kbd>Ctrl</kbd>\+<kbd>Alt</kbd>\+<kbd>I</kbd> on Windows and Linux,
 and <kbd>Cmd</kbd>\+<kbd>Option</kbd>\+<kbd>I</kbd> on Mac.
 
 The syntax of a code chunk is:
@@ -243,7 +244,7 @@ interviews <- read_csv(here("data/SAFI_clean.csv"), na = "NULL")
 
 ## Important Note!
 
-The file paths you give in a .Rmd document, *e.g.* to load a .csv file, are relative to the .Rmd document, **not** the project root.
+The file paths you give in a .Rmd document, *e.g.*, to load a .csv file, are relative to the .Rmd document, **not** the project root.
 
 As suggested in the Starting with Data episode, we highly recommend the use of the `here()` function to keep the file paths consistent within your project.
 
@@ -261,7 +262,7 @@ Instead, you can run the code chunk with the green triangle in the top right cor
 
 To make sure the table is formatted nicely in our output document, we will need to use the `kable()` function from the **knitr** package.
 The `kable()` function takes the output of your R code and knits it into a nice looking HTML table.
-You can also specify different aspects of the table, e.g. the column names, a caption, etc.
+You can also specify different aspects of the table, *e.g.*, the column names, a caption, etc.
 
 Run the code chunk to make sure you get the desired output.
 
