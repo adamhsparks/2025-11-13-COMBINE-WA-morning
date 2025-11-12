@@ -251,7 +251,7 @@ interviews <- read_csv(here("data/SAFI_clean.csv"), na = "NULL")
 
 ## Important Note!
 
-The file paths you give in a .Rmd document, *e.g.* to load a .csv file, are relative to the .Rmd document, **not** the project root.
+The file paths you give in a .Rmd document, *e.g.*, to load a .csv file, are relative to the .Rmd document, **not** the project root.
 
 As suggested in the Starting with Data episode, we highly recommend the use of the `here()` function to keep the file paths consistent within your project.
 
