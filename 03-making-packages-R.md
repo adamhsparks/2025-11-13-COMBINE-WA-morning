@@ -322,10 +322,6 @@ Using R's `example()` function on another function's name saves you from scrolli
 example(average)
 ```
 
-``` warning
-Warning in example(average): no help found for 'average'
-```
-
 ::::::::::::::::::::::::::::::::::::::: challenge
 
 ## Creating a Package for Distribution
