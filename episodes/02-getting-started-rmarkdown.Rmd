@@ -215,7 +215,7 @@ It is not enough to load **tidyverse** from the console, we will need to load it
 The same applies to our data.
 To load these, we will need to create a 'code chunk' at the top of our document (below the YAML header).
 
-A code chunk can be inserted by clicking Code > Insert Chunk, or by using the keyboard shortcuts <kbd>Ctrl</kbd>\+<kbd>Alt</kbd>\+<kbd>I</kbd> on Windows and Linux,
+A code chunk can be inserted by clicking `Code > Insert Chunk`, or by using the keyboard shortcuts <kbd>Ctrl</kbd>\+<kbd>Alt</kbd>\+<kbd>I</kbd> on Windows and Linux,
 and <kbd>Cmd</kbd>\+<kbd>Option</kbd>\+<kbd>I</kbd> on Mac.
 
 The syntax of a code chunk is:
