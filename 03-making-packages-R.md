@@ -42,7 +42,8 @@ package_name/
 └── <other_components>
 ```
 
-*There are other optional components. [rOpenSci community](https://devguide.ropensci.org/building.html) has written a science-focused guidebook for package development, while [the "R packages" book](https://r-pkgs.org/description.html) contains all the fundamental information.*
+*There are other optional components.
+[rOpenSci community](https://devguide.ropensci.org/building.html) has written a science-focused guidebook for package development, while [the "R packages" book](https://r-pkgs.org/description.html) contains all the fundamental information.*
 
 ### DESCRIPTION file
 
@@ -56,7 +57,7 @@ Maintainer: Name and email of package maintainer (who to contact with issues)
 License: Abbreviation for an open source license
 ```
 
-The package name can only contain letters and numbers and has to start with a letter.
+The package name can only contain letters and numbers and has to start with a letter, but may also contain a full stop "." character.
 
 ### .R files
 
@@ -64,12 +65,19 @@ Functions don't all have to be in one file or each in separate files.
 How you organize them is up to you.
 Suggestion: organize in a logical manner so that you know which file holds which functions.
 
+::::::::::::::::::::: callout
+I name the file after the function and have one main function per file, sometimes multiples but only the exported function that users see is what the file is named.
+The rest of the functions in the file may be called by the main exported function and that function only.
+Sometimes I have large unexported functions that have their own file as well.
+I also organise shared helper functions, remember, don't repeat yourself, that are not exported (visible to the end user) in an "internal_functions.R" or "utilities.R" file.
+:::::::::::::::::::::::::::::
+
 ### Making your first R package
 
 In this lesson, we will start building a "[personal package](https://hilaryparker.com/2013/04/03/personal-r-packages/)".
 This is meant to collect any kind of R code that is useful to *you*.
 As you continue to evolve it after this lesson, you may move code that belongs to the same publication, topic or a distinct project, into their own packages.
-Here we begin to realise the benefit of already documenting the functions formally earlier: We can publish more quickly, because we didn't leave much unfinished clean-up business.
+Here we begin to realise the benefit of already documenting the functions formally earlier: we can publish more quickly, because we didn't leave much unfinished clean-up business.
 
 To start working on this personal package, please open RStudio's `File` menu and select `New Project… > New Directory… > R Package`.
 Give it a unique, but useful name.
