@@ -119,7 +119,7 @@ Save the file in the `R/` directory with a descriptive name.
 
 ### `DESCRIPTION` File
 
-Next we need to create a `DESCRIUPTION` file.
+Next we need to create a `DESCRIPTION` file.
 The `DESCRIPTION` files can be generated with `usethis::use_description()`:
 
 ```
