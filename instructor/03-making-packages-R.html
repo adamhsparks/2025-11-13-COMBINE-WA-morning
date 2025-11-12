@@ -350,18 +350,6 @@ community</a> has written a science-focused guidebook for package
 development, while <a href="https://r-pkgs.org/description.html" class="external-link">the “R
 packages” book</a> contains all the fundamental information.</em></p>
 <div class="section level3">
-<h3 id="description-file">DESCRIPTION file<a class="anchor" aria-label="anchor" href="#description-file"></a></h3>
-<pre class="source"><code>Package: package_name
-Title: Brief package description
-Description: Longer package description
-Version: Version number(major.minor.patch)
-Author: Name and email of package creator
-Maintainer: Name and email of package maintainer (who to contact with issues)
-License: Abbreviation for an open source license</code></pre>
-<p>The package name can only contain letters and numbers and has to
-start with a letter, but may also contain a full stop “.” character.</p>
-</div>
-<div class="section level3">
 <h3 id="making-your-first-r-package">Making your first R package<a class="anchor" aria-label="anchor" href="#making-your-first-r-package"></a></h3>
 <p>In this lesson, we will start building a “<a href="https://hilaryparker.com/2013/04/03/personal-r-packages/" class="external-link">personal
 package</a>”. This is meant to collect any kind of R code that is useful
@@ -384,7 +372,7 @@ good practice to <code>create a git repository</code> now and
 <code>library(...)</code> line that appears in the console. Also, notice
 there is now a <code>package:YouRName</code> environment that is the
 parent environment to the global environment.</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -432,12 +420,23 @@ or “utilities.R” file.</p>
 </div>
 </div>
 </div>
+<p>In RStudio, click on <code>File &gt; New File &gt; R Script</code> to
+create a new R script. In the script, save this function.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">average</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">sum</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">/</span> <span class="fu">length</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre>
+</div>
+<p>Save the file in the <code>R/</code> directory with a descriptive
+name.</p>
 </div>
 <div class="section level3">
-<h3 id="description-file-1">
-<code>DESCRIPTION</code> file<a class="anchor" aria-label="anchor" href="#description-file-1"></a></h3>
-<p>We used RStudio’s import process to include the <code>.R</code> files
-we already had. However, FAIRer (because richer in metadata)
+<h3 id="description-file">
+<code>DESCRIPTION</code> File<a class="anchor" aria-label="anchor" href="#description-file"></a></h3>
+<p>Next we need to create a <code>DESCRIUPTION</code> file. The
 <code>DESCRIPTION</code> files can be generated with
 <code>usethis::use_description()</code>:</p>
 <pre><code>Package: PackageName
@@ -452,12 +451,40 @@ Authors@R:
 Description: What the package does (one paragraph).
     Use four spaces when indenting paragraphs within the Description.
 License: What license it uses
-Encoding: UTF-8
-LazyData: true</code></pre>
-<p>The package name can only contain letters and numbers and has to
-start with a letter.</p>
+Encoding: UTF-8</code></pre>
+<p>Fill in the necessary details here about the package name, noting
+that package name can only contain letters, numbers or a full stop, “.”,
+and must start with a letter. Add your name and a description of what
+the package does. If it starts with, “An R package to…”, CRAN will
+reject it saying that it’s obvious that it’s an R package, so think
+carefully about how you describe your package. Choose your license; if
+you are unsure, use <code>MIT + file LICENSE</code> which is a
+permissive open source license, but <code>GPL3</code> or the like is
+also good. Using <code>usethis::use_mit_license("Your Name")</code> will
+create a <code>LICENSE</code> file for you for the MIT license and
+update the <code>DESCRIPTION</code> file accordingly.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_mit_license</span><span class="op">(</span><span class="st">"Your Name"</span><span class="op">)</span></span></code></pre>
+</div>
+<p>Don’t use a Creative Commons license for software, keep that for
+documentation, manuscripts and other writing documents.</p>
+<div id="keeping-your-description-file-neat-and-tidy" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="keeping-your-description-file-neat-and-tidy" class="callout-inner">
+<h3 class="callout-title">Keeping Your <code>DESCRIPTION</code> File
+Neat and Tidy</h3>
+<div class="callout-content">
 <p>Using <code>desc::desc_normalise()</code> will format the
 <code>DESCRIPTION</code> file nicely.</p>
+</div>
+</div>
+</div>
 <div id="provide-citation-metadata-in-the-description-file" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -477,7 +504,7 @@ changes you can make to the <code>DESCRIPTION</code> file.</p>
 <h2 id="hint">Hint<a class="anchor" aria-label="anchor" href="#hint"></a></h2>
 <p>One useful resource to find the answer to such technical details is
 GitHub. Search for <code>org:ROpenSci filename:DESCRIPTION</code> (this
-restricts your search) to a community of practice and its R packages)
+restricts your search to a community of practice and its R packages)
 plus <a href="https://github.com/search?q=org%3AROpenSci+filename%3ADESCRIPTION+2019" class="external-link"><code>2019</code></a>
 or <a href="https://github.com/search?q=org%3AROpenSci+filename%3ADESCRIPTION+orcid" class="external-link"><code>orcid</code></a>
 for example.</p>
@@ -490,7 +517,7 @@ for example.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The date is added in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link">ISO 8601</a> format:
 <code>date: 2018-07-12</code>.</p>
@@ -510,16 +537,14 @@ FAIR metadata for your R package.</p>
 <h3 id="documenting-functions">Documenting functions<a class="anchor" aria-label="anchor" href="#documenting-functions"></a></h3>
 <p>A common way to put documentation in software is to add “informal”
 comments like this:</p>
-<div class="codewrapper sourceCode" id="cb5">
+<div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">center</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span>, <span class="va">desired</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="co"># return a new vector containing the original data centered around the</span></span>
-<span>  <span class="co"># desired value.</span></span>
-<span>  <span class="co"># Example: center(c(1, 2, 3), 0) should return [1] -1  0  1</span></span>
-<span>  <span class="va">new_data</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">data</span> <span class="op">-</span> <span class="fu">mean</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="va">desired</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">new_data</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">average</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># Take values in `x` and sum them for the total value of `x`.</span></span>
+<span>  <span class="co"># Then divide by the number of values in `x`.</span></span>
+<span>  <span class="fu">sum</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">/</span> <span class="fu">length</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 <p>This is a good practice to begin with. Keeping the documentation
@@ -529,7 +554,7 @@ do not see such informal comments.</p>
 <p>How can we create conveniently readable help pages for our own
 functions? By using the <a href="https://cran.r-project.org/package=roxygen2/vignettes/rd.html" class="external-link">roxygen2</a>
 package!</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -559,22 +584,20 @@ alongside the code.</p>
 <code>#'</code> notation</a> for documenting functions. Please compare
 the following to the informal comments we used above and in the <a href="../%7B%7B%20page.root%20%7D%7D/02-starting-with-data">“Analyzing
 Patient Data” episode</a>:</p>
-<div class="codewrapper sourceCode" id="cb7">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Centering Data</span></span>
+<code class="sourceCode R"><span><span class="co">#' Find the Average of a Numeric Vector</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param data The numeric vector to be centered</span></span>
-<span><span class="co">#' @param desired The numeric value around which the data will be centered</span></span>
+<span><span class="co">#' @param x The numeric vector to be averaged.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @return A new vector containing the original data centered around the desired value.</span></span>
+<span><span class="co">#' @returns A numeric value representing the average of the input vector.</span></span>
 <span><span class="co">#' @export</span></span>
 <span><span class="co">#' @examples</span></span>
-<span><span class="co">#'   center(c(1, 2, 3), 0)  # should return [1] -1  0  1</span></span>
-<span><span class="va">center</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">data</span>, <span class="va">desired</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">new_data</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">data</span> <span class="op">-</span> <span class="fu">mean</span><span class="op">(</span><span class="va">data</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="va">desired</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">new_data</span><span class="op">)</span></span>
+<span><span class="co">#'   average(c(1, 2, 3)) # will be 2</span></span>
+<span><span class="va">average</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu">sum</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">/</span> <span class="fu">length</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 <p>Unsurprisingly, the first line should be a short, descriptive title.
@@ -582,20 +605,18 @@ Additional text paragraphs are possible after leaving one line blank
 with only a <code>#'</code>. The descriptive tags (preceded by an
 <code>@</code>) hold the most important details. Each
 <code>@param</code> documents an input parameter, while
-<code>@return</code> explains the function’s output. The more
+<code>@returns</code> explains the function’s output. The more
 comprehensible a description of its in- and output data (types), the
 easier a function can be integrated into larger analysis pipelines.
-<code>@export</code> means that the function is presented to users,
-after we have <a href="../%7B%7B%20page.root%20%7D%7D/reference/#packages">packaged it in a
-later episode</a>.</p>
+<code>@export</code> means that the function is presented to users.</p>
 <p>Remember that we documented our functions with roxygen comments?
 Let’s try and look it up:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="op">?</span><span class="va">center</span></span>
-<span><span class="fu">help</span><span class="op">(</span><span class="va">rescale</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="op">?</span><span class="va">average</span></span>
+<span><span class="fu">help</span><span class="op">(</span><span class="va">average</span><span class="op">)</span></span></code></pre>
 </div>
 <div id="why-no-documentation-for-in-specified-packages-and-libraries-we-did-write-it" class="callout challenge">
 <div class="callout-square">
@@ -607,8 +628,8 @@ Let’s try and look it up:</p>
 <code>No documentation for '…' in specified packages and libraries</code>?
 We did write it!</h3>
 <div class="callout-content">
-<p>Why do you think the documentation of our package can not be found.
-Hint: Look at the commit diff.</p>
+<p>Why do you think the documentation of our package can not be found?
+Hint: If you’re using Git, look at the commit diff.</p>
 </div>
 </div>
 </div>
@@ -617,7 +638,7 @@ Hint: Look at the commit diff.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>We did not yet tell R to actually generate the <code>man</code>ual
 files and folders in our package. This needs to be done with
@@ -628,7 +649,11 @@ files and folders in our package. This needs to be done with
 </div>
 </div>
 <p>After <code>Install and Restart</code>-ing again, looking up the
-documentation should work.</p>
+documentation should work. A shortcut here is to save your .R file and
+run <code>devtools::document</code> followed by
+<code>devtools::load_all()</code>, which will also load your package in
+your current session and make the documentation available to you as you
+work.</p>
 <p>What exactly does <code>roxygen2</code> do? It reads lines that begin
 with <code>#'</code> as the function documentation for your package.
 Descriptive tags are preceded with the <code>@</code> symbol. For
@@ -647,7 +672,10 @@ package in the console’s tab-completion.</p>
 default file, remove the <code>@export</code> tag from the auxiliary
 functions, and rerun <code>roxygenise()</code>. It’s still a good idea
 to retain their other roxygen tags (esp. <code>@param</code> &amp;
-<code>@return</code>).</p>
+<code>@return</code>) but use <code>@noRD</code> in place of
+<code>@export</code> and include an <code>@keywords Internal</code> to
+signal to <code>roxygen</code> that these files are not to be shown to
+users.</p>
 <p>Learn more about this from the <a href="https://r-pkgs.had.co.nz/namespace.html" class="external-link">“R packages”
 book</a>.</p>
 </div>
@@ -667,9 +695,10 @@ documentation.</p>
 <div id="how-would-you-word-the-commit-message" class="callout-inner">
 <h3 class="callout-title">How would you word the commit message?</h3>
 <div class="callout-content">
-<p>“Add docu” is a bit moot, because that’s obvious from the filenames
-and contents. Which other messages would better explain the “Why?”, or
-that would be more useful when browsing the commit history later</p>
+<p>“Add average” is a bit moot, because that’s obvious from the
+filenames and contents. Which other messages would better explain the
+“Why?”, or that would be more useful when browsing the commit history
+later</p>
 </div>
 </div>
 </div>
@@ -678,7 +707,7 @@ that would be more useful when browsing the commit history later</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <ul><li>“roxygenise() function comments into help pages” because it mentions
 the command you used</li>
@@ -688,16 +717,20 @@ the command you used</li>
 </div>
 </div>
 </div>
-<p>Also, after <code>roxygenise()</code>-ing the function docu, you can
-tell R to run the examples. Using R’s <code>example()</code> function on
-another function’s name saves you from scrolling down its help page,
-copying the example code and pasting it into the console.</p>
-<div class="codewrapper sourceCode" id="cb9">
+<p>Also, after <code>roxygenise()</code>-ing the function average, you
+can tell R to run the examples. Using R’s <code>example()</code>
+function on another function’s name saves you from scrolling down its
+help page, copying the example code and pasting it into the console.</p>
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">example</span><span class="op">(</span><span class="va">center</span><span class="op">)</span></span>
-<span><span class="fu">example</span><span class="op">(</span><span class="va">rescale</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="fu">example</span><span class="op">(</span><span class="va">average</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">WARNING<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="warning" tabindex="0"><code>Warning in example(average): no help found for 'average'</code></pre>
 </div>
 <div id="creating-a-package-for-distribution" class="callout challenge">
 <div class="callout-square">
@@ -707,21 +740,21 @@ copying the example code and pasting it into the console.</p>
 <div id="creating-a-package-for-distribution" class="callout-inner">
 <h3 class="callout-title">Creating a Package for Distribution</h3>
 <div class="callout-content">
-<ol style="list-style-type: decimal"><li>Create some new functions for your tempConvert package to convert
-from Celsius to Fahrenheit or from Kelvin to Celsius or Fahrenheit.</li>
-<li>Create a package for our <code>analyze</code> function so that it
-will be easy to load when more data arrives.</li>
-</ol></div>
+<p>Create a new package from scratch that converts temperature between
+Celsius, Fahrenheit and Kelvin. Alternatively, use your own functions
+that you may have written that you find useful and create a package with
+them for you to use. I have an example of my own here, <a href="https://adamhsparks.codeberg.page/misc.debris/" class="external-link">misc.debris</a>.</p>
+</div>
 </div>
 </div>
 <div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
-  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+  <h4 class="accordion-header" id="headingSolution3"> Solution for Temperature Conversion Package Functions </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -739,7 +772,7 @@ will be easy to load when more data arrives.</li>
 <span>  <span class="va">temp_C</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -757,7 +790,7 @@ will be easy to load when more data arrives.</li>
 <span>  <span class="va">temp_F</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -775,6 +808,21 @@ will be easy to load when more data arrives.</li>
 <span>  <span class="va">temp_F</span> <span class="op">&lt;-</span> <span class="fu">celsius_to_fahrenheit</span><span class="op">(</span><span class="va">temp_C</span><span class="op">)</span></span>
 <span>  <span class="va">temp_F</span></span>
 <span><span class="op">}</span></span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="solution-for-temperature-conversion-package-description-file">Solution for Temperature Conversion Package DESCRIPTION File<a class="anchor" aria-label="anchor" href="#solution-for-temperature-conversion-package-description-file"></a></h2>
+<pre><code>Package: tempConvertR
+Type: Package
+Version: 0.1.0
+Title: Automates temperature conversions between Celsius, Fahrenheit and Kelvin
+Authors@R:
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com")
+Description: Takes temperature values and converts from one scale to another.
+License: MIT + file LICENSE
+Encoding: UTF-8</code></pre>
 </div>
 </div>
 </div>
