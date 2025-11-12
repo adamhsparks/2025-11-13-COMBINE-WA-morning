@@ -198,13 +198,38 @@ Review is used for preparing experiments and manuscripts; why not use it for cod
 Our code is also a major scientific achievement and the product of lots of hard work!
 Reviews are built into [GitHub's Pull request feature][gh-pr].
 
+9. Use [RStudio projects](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro.html) to manage your work.
+
 ::::::::::::::::::::::::::::::::::::::: challenge
 
-## Best Practice
+## Challenge: Creating a Self-contained Project
+
+We're going to create a new project in RStudio and save some data for later use:
+
+1. Click the "File" menu button, then "New Project".
+2. Click "New Directory".
+3. Click "New Project".
+4. Type in the name of the directory to store your project, _e.g._, "my\_project".
+5. Click the "Create Project" button.
+6. Tick the "Open project in new session" box and click "OK".
+7. In your new RStudio project window, from the Files pane, click on the "New Folder" button and create a new directory called "data".
+7. Download the file located at <https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/blob/main/episodes/data/SAFI_clean.csv> and save it in the "data" directory you just created in your new project folder.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+The simplest way to open an RStudio project once it has been created is to click through your file system to get to the directory where it was saved and double click on the `.Rproj` file.
+This will open RStudio and start your R session in the same directory as the `.Rproj` file.
+All your data, plots and scripts will now be relative to the project directory.
+RStudio projects have the added benefit of allowing you to open multiple projects at the same time each open to its own project directory.
+This allows you to keep multiple projects open without them interfering with each other.
+
+::::::::::::::::::::::::::::::::::::::: challenge
+
+## Best Practice Discussion
 
 1. What other suggestions do you have for coding best practices?
 
-:::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [swc-lesson-git]: https://swcarpentry.github.io/git-novice/
 [rstudio-git]: https://docs.posit.co/ide/user/ide/guide/tools/version-control.html
