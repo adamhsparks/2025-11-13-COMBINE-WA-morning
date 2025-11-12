@@ -82,7 +82,7 @@ Image credit: <a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-
 
 ## Creating an R Markdown file
 
-To create a new R Markdown document in RStudio, click File -> New File -> R Markdown:
+To create a new R Markdown document in RStudio, click `File -> New File -> R Markdown`:
 
 ![](fig/new-rmd.png){alt="Screenshot of the New R Markdown file dialogue box in RStudio"}
 

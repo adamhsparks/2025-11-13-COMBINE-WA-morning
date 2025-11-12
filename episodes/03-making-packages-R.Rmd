@@ -47,7 +47,8 @@ package_name/
 └── <other_components>
 ```
 
-*There are other optional components. [rOpenSci community](https://devguide.ropensci.org/building.html) has written a science-focused guidebook for package development, while [the "R packages" book](https://r-pkgs.org/description.html) contains all the fundamental information.*
+*There are other optional components.
+[rOpenSci community](https://devguide.ropensci.org/building.html) has written a science-focused guidebook for package development, while [the "R packages" book](https://r-pkgs.org/description.html) contains all the fundamental information.*
 
 ### DESCRIPTION file
 
@@ -61,13 +62,19 @@ Maintainer: Name and email of package maintainer (who to contact with issues)
 License: Abbreviation for an open source license
 ```
 
-The package name can only contain letters and numbers and has to start with a letter.
+The package name can only contain letters and numbers and has to start with a letter, but may also contain a full stop "." character.
 
 ### .R files
 
 Functions don't all have to be in one file or each in separate files.
 How you organize them is up to you.
 Suggestion: organize in a logical manner so that you know which file holds which functions.
+
+::::::::::::::::::::: callout
+I name the file after the function and have one main function per file, sometimes multiples but only the exported function that users see is what the file is named.
+The rest of the functions in the file may be called by the main exported fucntion and that function only.
+
+:::::::::::::::::::::::::::::
 
 ### Making your first R package
 
