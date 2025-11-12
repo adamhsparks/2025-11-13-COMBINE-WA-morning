@@ -327,7 +327,7 @@
         
 <section id="aio-01-best-practices-R"><p>Content from <a href="01-best-practices-R.html">Best Practices for Writing R Code</a></p>
 <hr>
-<p>Last updated on 2025-11-11 |
+<p>Last updated on 2025-11-12 |
 
         <a href="https://github.com/adamhsparks/r-programming/edit/main/episodes/01-best-practices-R.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 15 minutes</p>
@@ -589,14 +589,53 @@ used for preparing experiments and manuscripts; why not use it for code
 as well? Our code is also a major scientific achievement and the product
 of lots of hard work! Reviews are built into <a href="https://github.com/skills/review-pull-requests" class="external-link">GitHub’s Pull
 request feature</a>.</p></li>
+<li><p>Use <a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro.html" class="external-link">RStudio
+projects</a> to manage your work.</p></li>
 </ol>
-<div id="best-practice" class="callout discussion">
+<div id="challenge-creating-a-self-contained-project" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="best-practice" class="callout-inner">
-<h3 class="callout-title">Best Practice</h3>
+<div id="challenge-creating-a-self-contained-project" class="callout-inner">
+<h3 class="callout-title">Challenge: Creating a Self-contained
+Project</h3>
+<div class="callout-content">
+<p>We’re going to create a new project in RStudio and save some data for
+later use:</p>
+<ol style="list-style-type: decimal">
+<li>Click the “File” menu button, then “New Project”.</li>
+<li>Click “New Directory”.</li>
+<li>Click “New Project”.</li>
+<li>Type in the name of the directory to store your project,
+<em>e.g.</em>, “my_project”.</li>
+<li>Click the “Create Project” button.</li>
+<li>Tick the “Open project in new session” box and click “OK”.</li>
+<li>In your new RStudio project window, from the Files pane, click on
+the “New Folder” button and create a new directory called “data”.</li>
+<li>Download the file located at <a href="https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/blob/main/episodes/data/SAFI_clean.csv" class="external-link uri">https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/blob/main/episodes/data/SAFI_clean.csv</a>
+and save it in the “data” directory you just created in your new project
+folder.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>The simplest way to open an RStudio project once it has been created
+is to click through your file system to get to the directory where it
+was saved and double click on the <code>.Rproj</code> file. This will
+open RStudio and start your R session in the same directory as the
+<code>.Rproj</code> file. All your data, plots and scripts will now be
+relative to the project directory. RStudio projects have the added
+benefit of allowing you to open multiple projects at the same time each
+open to its own project directory. This allows you to keep multiple
+projects open without them interfering with each other.</p>
+<div id="best-practice-discussion" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="best-practice-discussion" class="callout-inner">
+<h3 class="callout-title">Best Practice Discussion</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>What other suggestions do you have for coding best practices?</li>
@@ -636,7 +675,7 @@ workspace.</li>
 </div>
 </div></section><section id="aio-02-getting-started-rmarkdown"><p>Content from <a href="02-getting-started-rmarkdown.html">Getting started with R Markdown</a></p>
 <hr>
-<p>Last updated on 2025-11-11 |
+<p>Last updated on 2025-11-12 |
 
         <a href="https://github.com/adamhsparks/r-programming/edit/main/episodes/02-getting-started-rmarkdown.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 45 minutes</p>
@@ -648,7 +687,7 @@ workspace.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <ul>
 <li>This is an optional lesson intended to introduce learners to R
@@ -1247,7 +1286,7 @@ the output.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Create a chunk with <code>{r eval = FALSE, echo = FALSE}</code>, then
 create another chunk with <code>{r include = FALSE}</code> to compare.
@@ -1271,7 +1310,7 @@ chunk is the number of backticks. In-line R code uses one backtick
 (<code>`r`</code>), whereas code chunks use three backticks
 (<code>```r```</code>).</p>
 <p>For example, today’s date is <code>`r Sys.Date()`</code>, will be
-rendered as: today’s date is 2025-11-11. The code will display today’s
+rendered as: today’s date is 2025-11-12. The code will display today’s
 date in the output document (well, technically the date the document was
 last knitted).</p>
 <p>The best way to use in-line R code, is to minimise the amount of code
@@ -1348,7 +1387,7 @@ the <code>interviews_plotting</code> data frame.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Solution to Exercise </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1493,7 +1532,7 @@ document</li>
 </div>
 </section></section><section id="aio-03-making-packages-R"><p>Content from <a href="03-making-packages-R.html">Making Packages in R</a></p>
 <hr>
-<p>Last updated on 2025-11-11 |
+<p>Last updated on 2025-11-12 |
 
         <a href="https://github.com/adamhsparks/r-programming/edit/main/episodes/03-making-packages-R.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 90 minutes</p>
@@ -1977,8 +2016,8 @@ CC-by-4.0 Licence.</p>
   "url": "https://adamhsparks.github.io/r-programming/instructor/aio.html",
   "identifier": "https://adamhsparks.github.io/r-programming/instructor/aio.html",
   "dateCreated": "2014-12-18",
-  "dateModified": "2025-11-11",
-  "datePublished": "2025-11-11"
+  "dateModified": "2025-11-12",
+  "datePublished": "2025-11-12"
 }
 
   </script><script>

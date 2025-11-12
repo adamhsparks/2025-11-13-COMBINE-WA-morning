@@ -282,7 +282,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Best Practices for Writing R Code</h1>
-        <p>Last updated on 2025-11-11 |
+        <p>Last updated on 2025-11-12 |
 
         <a href="https://github.com/adamhsparks/r-programming/edit/main/episodes/01-best-practices-R.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -536,13 +536,50 @@ used for preparing experiments and manuscripts; why not use it for code
 as well? Our code is also a major scientific achievement and the product
 of lots of hard work! Reviews are built into <a href="https://github.com/skills/review-pull-requests" class="external-link">GitHub’s Pull
 request feature</a>.</p></li>
-</ol><div id="best-practice" class="callout discussion">
+<li><p>Use <a href="https://swcarpentry.github.io/r-novice-gapminder/02-project-intro.html" class="external-link">RStudio
+projects</a> to manage your work.</p></li>
+</ol><div id="challenge-creating-a-self-contained-project" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <span class="callout-header">Discussion</span>
-<div id="best-practice" class="callout-inner">
-<h3 class="callout-title">Best Practice</h3>
+<div id="challenge-creating-a-self-contained-project" class="callout-inner">
+<h3 class="callout-title">Challenge: Creating a Self-contained
+Project</h3>
+<div class="callout-content">
+<p>We’re going to create a new project in RStudio and save some data for
+later use:</p>
+<ol style="list-style-type: decimal"><li>Click the “File” menu button, then “New Project”.</li>
+<li>Click “New Directory”.</li>
+<li>Click “New Project”.</li>
+<li>Type in the name of the directory to store your project,
+<em>e.g.</em>, “my_project”.</li>
+<li>Click the “Create Project” button.</li>
+<li>Tick the “Open project in new session” box and click “OK”.</li>
+<li>In your new RStudio project window, from the Files pane, click on
+the “New Folder” button and create a new directory called “data”.</li>
+<li>Download the file located at <a href="https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/blob/main/episodes/data/SAFI_clean.csv" class="external-link uri">https://github.com/adamhsparks/2025-11-13-COMBINE-WA-morning/blob/main/episodes/data/SAFI_clean.csv</a>
+and save it in the “data” directory you just created in your new project
+folder.</li>
+</ol></div>
+</div>
+</div>
+<p>The simplest way to open an RStudio project once it has been created
+is to click through your file system to get to the directory where it
+was saved and double click on the <code>.Rproj</code> file. This will
+open RStudio and start your R session in the same directory as the
+<code>.Rproj</code> file. All your data, plots and scripts will now be
+relative to the project directory. RStudio projects have the added
+benefit of allowing you to open multiple projects at the same time each
+open to its own project directory. This allows you to keep multiple
+projects open without them interfering with each other.</p>
+<div id="best-practice-discussion" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="best-practice-discussion" class="callout-inner">
+<h3 class="callout-title">Best Practice Discussion</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>What other suggestions do you have for coding best practices?</li>
 </ol></div>
@@ -638,8 +675,8 @@ workspace.</li>
   "url": "https://adamhsparks.github.io/r-programming/instructor/01-best-practices-R.html",
   "identifier": "https://adamhsparks.github.io/r-programming/instructor/01-best-practices-R.html",
   "dateCreated": "2014-12-18",
-  "dateModified": "2025-11-11",
-  "datePublished": "2025-11-11"
+  "dateModified": "2025-11-12",
+  "datePublished": "2025-11-12"
 }
 
   </script><script>
