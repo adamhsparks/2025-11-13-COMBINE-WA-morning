@@ -197,9 +197,10 @@ Reviews are built into [GitHub's Pull request feature][gh-pr].
 
 9. Use [RStudio projects](https://swcarpentry.github.io/r-novice-gapminder/02-project-intro.html) to manage your work.
 
-::::::::::::::::::::::::::::::::::::::: challenge
 
-## Challenge: Creating a Self-contained Project
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Exercise: Creating a Self-contained Project
 
 We're going to create a new project in RStudio and save some data for later use:
 
@@ -220,7 +221,7 @@ All your data, plots and scripts will now be relative to the project directory.
 RStudio projects have the added benefit of allowing you to open multiple projects at the same time each open to its own project directory.
 This allows you to keep multiple projects open without them interfering with each other.
 
-::::::::::::::::::::::::::::::::::::::: challenge
+:::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Best Practice Discussion
 
